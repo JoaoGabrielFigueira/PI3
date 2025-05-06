@@ -8,7 +8,7 @@ const requiredEnv = [
     "DB_NAME",
     "DB_PASSWORD",
     "DB_PORT",
-    "DB_URL"
+    "DB_URL",
 ];
 
 const missingEnv = requiredEnv.filter((envVar) => !process.env[envVar]);

@@ -1,5 +1,5 @@
 import { Pool } from "pg";
-import "../config/checkEnv";  // Já garante que as variáveis de ambiente foram carregadas
+import "../config/checkEnv";  
 
 const pool = new Pool({
     connectionString: process.env.DB_URL,
@@ -8,6 +8,9 @@ const pool = new Pool({
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: Number(process.env.DB_PORT),
+    ssl: {
+        rejectUnauthorized: false, 
+      },
 });
 
 const connect_to_database = async (): Promise<void> => {
