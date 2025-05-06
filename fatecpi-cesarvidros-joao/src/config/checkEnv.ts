@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: __dirname + "/../../.env" });
 
+
 const requiredEnv = [
     "DB_USER",
     "DB_HOST",
